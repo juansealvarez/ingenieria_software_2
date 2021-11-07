@@ -27,6 +27,23 @@ const handleSubmit = async(e) =>{
 
 }
 
+const Upload = () =>{
+    const [file,setFile] = document.getElementById("file").value
+
+    const {state:{file}, dispatch } = useContext(Context);
+    //const {user} = state
+
+    const router  = useRouter()
+
+    useEffect(()=>{
+        if(file !==null) {
+            upload.file(file)
+        }else{
+            (rouer.push("/profile"))
+        }
+    },[file])
+}
+
 const Profile = ()  =>{
     return (
         <>
@@ -35,6 +52,7 @@ const Profile = ()  =>{
                     <h1>Perfil</h1>
                 </div>
                 <form  onSubmit={handleSubmit}>
+                    <input id="file" type="file" className= "form-control mb-4 p-4" value={file} onChange={(e)=> setFile(e.target.value)} placeholder="Sube tu CV aqui" required/>
                     <button type="submit" className="btn btn-block btn-primary " disabled={!pdf}> {loading ? <SyncOutlined spin />: "Submit CV"}</button>
                     <button type="submit" hidden className="btn btn-block btn-primary " disabled={!pdf}> {loading ? <SyncOutlined spin />: "Delete CV"}</button>
                 </form>
