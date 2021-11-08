@@ -47,6 +47,7 @@ const Upload = () =>{
 const Profile = ()  =>{
     return (
         <>
+            <h1 className="jumbotron text-center bg-primary square"> Profile </h1>
             <body class="container">
                 <div>
                     <h1>Perfil</h1>
