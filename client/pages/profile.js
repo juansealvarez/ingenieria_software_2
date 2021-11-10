@@ -27,7 +27,7 @@ const handleSubmit = async(e) =>{
 
 }
 
-const Upload = () =>{
+const Profile = ()  =>{
     const [file,setFile] = document.getElementById("file").value
 
     const {state:{file}, dispatch } = useContext(Context);
@@ -42,9 +42,7 @@ const Upload = () =>{
             (rouer.push("/profile"))
         }
     },[file])
-}
 
-const Profile = ()  =>{
     return (
         <>
             <h1 className="jumbotron text-center bg-primary square"> Profile </h1>

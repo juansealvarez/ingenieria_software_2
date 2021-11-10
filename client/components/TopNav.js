@@ -68,6 +68,16 @@ const TopNav = () => {
               <a>Register</a>
             </Link>
           </Item>
+
+          <Item
+            key="/upload-cv"
+            onClick={(e) => setCurrent(e.key)}
+            icon={<LoginOutlined />}
+          >
+            <Link href="/upload-cv">
+              <a>Subir CV</a>
+            </Link>
+          </Item>
         </>
       )}
 
